@@ -1,0 +1,293 @@
+/* PAGE */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* LAYOUT */
+
+body {
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+    margin: auto 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 90vh auto 100px;
+    height: 100%;
+}
+
+
+
+/* NAVIGATION BAR */
+
+.nav_bar {
+    background-color: #000000; 
+}
+
+.nav_list {
+    margin:0;
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
+}
+
+.li_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_item {
+    color: white;
+    font-size: 1.1em;
+}
+
+.nav_item:hover {
+    text-decoration: underline;
+}
+
+.nav_push {
+    color: yellow;
+}
+
+.push {
+    margin-left: auto;
+    padding-right: 20%;
+} 
+
+
+/* COVER */
+
+#cover {
+    padding: 18em 0 4em 0;
+    background-image: url(img/calle_paz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 0.6fr;
+    gap: 15%;
+}
+
+/* First text-box element */
+
+#item_1 {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_box {
+    /* height: %; */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px groove rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title_1 {
+    color: rgba(245, 245, 245, 0.85);
+    font-size: 1.3em;
+    padding: 15px 35px 10px 35px;
+    text-decoration: underline;
+}
+
+#subtitle_1 {
+    color: rgba(245, 245, 245, 0.85);
+    font-size: 1.1em;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+/* Second Text Box Element */
+
+#item_2 {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#button {
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px groove rgba(255, 255, 255, 0.5);
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: rgba(245, 245, 245, 0.8);
+}
+
+#button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 1s;
+    background-color:  rgba(128, 128, 128, 0.7) ;
+    color: white;
+    border-color: rgba(128, 128, 128, 0.4);
+}
+
+
+/* PROJECT GRID */
+
+.background_content {
+    margin: auto 100px;
+    background: linear-gradient(#f6e6b4, #ed9017, #f6e6b4, #ed9017, #f6e6b4,  #ed9017, #f6e6b4);
+}
+
+.content {
+    margin: 10% 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.text_content {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 8%;
+    border-radius: 40px;
+    background: white;
+}
+
+.title_content {
+    margin: 30px 0;
+    font-size: 1.5em;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.info_content {
+    font-size: 1.2em;
+    margin: 10px 40px 20px 40px;
+    text-align: left;
+}
+
+.image_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 90%;
+    height: 90%;
+}
+
+.caption {
+    margin: 15px 0 0 0;
+    font-style: italic;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    background-color: black;
+}
+
+/* Logo */
+
+.img_footer {
+    margin: 10px 0 10px 10px;
+    background-image: url(img/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Text Box */
+
+.flex_footer {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    text-transform: none;
+}
+
+.text_footer {
+    padding: 5px 0;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* if Device Screen is small/medium */
+
+@media only screen and (max-width: 800px) {
+
+    /* NAVIGATION BAR */
+
+    .nav_item {
+        transform: scale(0.8);
+        /* font-size: 0.8em; */
+    }
+
+    /* COVER */
+
+    #title_1 {
+        transform: scale(0.8);
+        padding: 10px 0 2.5px 0;
+        /* font-size: 0.75em;
+        padding: 5px 15px 5px 15px; */
+    }
+
+    #subtitle_1 {
+        transform: scale(0.8);
+        padding-bottom: 10px;
+    }
+
+    #button {
+        transform: scale(0.8);
+        /* font-size: 0.6em; */
+    }
+
+    #button:hover {
+        transform: scale(0.9);
+    }
+
+    /* CONTENT */
+
+    /* FOOTER */
+
+    .text_footer {
+        transform: scale(0.8);
+    }
+
+    .img_footer {
+        transform: scale(0.8);
+    }
+}
